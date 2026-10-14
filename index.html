@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopGuard AI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #101827;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+    .box {
+      max-width: 450px;
+      margin: 50px auto;
+      padding: 25px;
+      background: #1f2b40;
+      border-radius: 15px;
+    }
+    input, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 13px;
+      margin-top: 15px;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      background: #20c997;
+      color: #101827;
+      font-weight: bold;
+    }
+    #result { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>🛡️ ShopGuard AI</h1>
+    <p>Check suspicious shopping offers</p>
 
+    <input id="offer" type="text"
+      placeholder="Enter offer details">
+
+    <button onclick="checkOffer()">Check Offer</button>
+
+    <p id="result"></p>
+    <small>Demo version — not a verified AI detector.</small>
+  </div>
+
+  <script>
+    function checkOffer() {
+      const offer = document.getElementById("offer").value.trim();
+      const
